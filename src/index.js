@@ -10,7 +10,7 @@ function tryRules(rules, request) {
     return rules.find(ruleMatches(request.path, request.request))
 }
 
-function rewireHook(rules) {
+function rewireHook(resolver, rules) {
     return function(request, resolveContext, callback) {
         const rule = tryRules(rules, request)
         if (rule) {
@@ -28,7 +28,7 @@ class RewireResolverPlugin {
 
     apply(resolver) {
         const target = resolver.ensureHook('resolve')
-        resolver.getHook('resolve').tapAsync('RewireResolverPlugin', rewireHook(this.rules))
+        resolver.getHook('resolve').tapAsync('RewireResolverPlugin', rewireHook(resolver, this.rules))
     }
 }
 
