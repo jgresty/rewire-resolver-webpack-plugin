@@ -1,0 +1,17 @@
+{
+    "name": "rewire-resolver-webpack-plugin",
+    "version": "1.0.0",
+    "description": "Change which packages webpack resolves imports to",
+    "main": "src/index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:jgresty/rewire-resolver-webpack-plugin.git"
+    },
+    "keywords": [
+        "webpack-plugin",
+        "webpack"
+    ],
+    "author": "John Gresty <git@jgresty.uk>",
+    "license": "Zlib"
+}
