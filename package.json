@@ -1,6 +1,6 @@
 {
     "name": "rewire-resolver-webpack-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Change which packages webpack resolves imports to",
     "main": "src/index.js",
     "types": "src/index.d.js",
